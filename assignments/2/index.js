@@ -120,7 +120,7 @@ PersonConstructor.prototype.introduce = function () {
                         USING ES6 CLASSES
 ****************************************************************/
 
-/*** CHALLENGE 1 of 3 ***/
+/*** CHALLENGE 1 of  2***/
 
 class PersonClass {
   constructor(name) {
@@ -139,14 +139,16 @@ var george = new PersonClass;
 
 
 
-/*** CHALLENGE 2 of 3 ***/
+/*** CHALLENGE 2 of 2 ***/
 
 class DeveloperClass extends PersonClass {
+  constructor(name) {
+    super(name);
+  }
   introduce() {
     console.log(`Hi, my name is ${this.name}"`);
   }
 }
-
 
 // /********* Uncomment these lines to test your work! *********/
 // var thai = new DeveloperClass('Thai', 32);
@@ -158,6 +160,7 @@ class DeveloperClass extends PersonClass {
 /****************************************************************
                       EXTENSION: SUBCLASSING
 ****************************************************************/
+
 
 var userFunctionStore = {
   sayType: function() {
@@ -173,16 +176,24 @@ function userFactory(name, score) {
   return user;
 }
 
-var adminFunctionStore /* Put code here */ ;
+var adminFunctionStore = Object.assign({}, userFunctionStore); /* Put code here */ ;
 
 function adminFactory(name, score) {
-  // Put code here
+  let admin = Object.create(adminFunctionStore);
+  Object.assign(admin, userFactory)
+  admin.type = "Admin";
+  return admin;
 }
-
 /* Put code here for a method called sharePublicMessage*/
-
 var adminFromFactory = adminFactory("Eva", 5);
 
+adminFunctionStore.sharePublicMessage = function() {
+  console.log('Welcome Users!')
+}
+
+
+
 // /********* Uncomment these lines to test your work! *********/
-// adminFromFactory.sayType() // -> Logs "I am a Admin"
-// adminFromFactory.sharePublicMessage() // -> Logs "Welcome users!"
+adminFromFactory.sayType() // -> Logs "I am a Admin"
+adminFromFactory.sharePublicMessage() // -> Logs "Welcome users!"
+
