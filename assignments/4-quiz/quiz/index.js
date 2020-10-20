@@ -42,7 +42,7 @@ class Quiz {
     score.textContent = `Your Score: ${this.score}`;
     if (this.activeIndex === this.allQuestions.length) {
       let congratulations = document.createElement("p");
-      congratulations.innerText = "Congratulations!";
+      congratulations.innerText = "YAYY!!!🎉";
       box.append(quizHeading, score, congratulations);
       return;
     }
@@ -97,7 +97,7 @@ class Question {
 
 let question1 = new Question(
   "What is the tip of a shoelace called?",
-  ["Saglet", "Aglet", "Froglet", "Magnet"],
+  ["Chiclet", "Aglet", "Froglet", "Magnet"],
   1
 );
 let question2 = new Question(
