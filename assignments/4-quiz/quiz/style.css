@@ -1,0 +1,54 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    
+}
+.main {
+    text-align: center;
+    margin-top: 10rem;
+    border: 1.5px solid black;
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding: 2rem;
+   border-radius: 30px;
+   position: relative;
+   bottom: 8rem;
+   background-color:tomato;
+}
+h1 {
+    font-size: 3.5rem;
+    color: black;
+}
+button {
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    padding-right: 2rem;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    color: black;
+    border: black solid 1px;
+    cursor: pointer;
+    background-color: tomato;
+    border-radius: 50px;
+}
+p {
+    color: black;
+    font-weight: 900;
+    font-size: 1.8rem;
+    display: inline-block;
+    margin-right: 2rem;
+    
+    padding-bottom: 1.5rem;
+}
+label{
+    font-size: 1.3rem;
+    margin-right: 2rem;
+}
+input {
+    height: 15px;
+    width: 15px;
+    position: relative;
+    right: 2px;
+}
